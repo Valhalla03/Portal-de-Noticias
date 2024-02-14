@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Portal de Noticias</h1>
+    
+    <div class="dropdown">
+        <button class="dropbtn">internacional</button>
+        <div class="dropdown-content">
+          <a href="#">Deporte</a>
+          <a href="#">Economia</a>
+          <a href="#">L</a>
+        </div>
+      </div>
+    
+      <div class="dropdown">
+        <button class="dropbtn">Nacionales</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">Comunidad</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Chismes anononimos</a>
+        </div>
+      </div>
+    
+</header>
+
+<div class="container">
+    <div class="noticia">
+        <img src="iNTELIGENCIA-ARTIFICIAL.jpg" alt="Imagen Noticia 1">
+        <h2>IA y sus avances</h2>
+        <p>El rápido avance de la inteligencia artificial está transformando radicalmente numerosos aspectos de nuestra sociedad. </p>
+        <p><a href="#">Leer más</a></p>
+    </div>
+
+    <div class="noticia">
+        <img src="Presidente-Luis-Abinader-4-1140x731.jpeg" alt="Imagen Noticia 2">
+        <h2>Avances que ha hecho Abinader</h2>
+        <p>El presidente de la República Dominicana, Luis Abinader, ha estado impulsando una serie de reformas y políticas para abordar los desafíos económicos y sociales del país. </p>
+        <p><a href="#">Leer más</a></p>
+    </div>
+
+    <div class="noticia">
+        <img src="nfl-guia-practica-2.jpg" alt="Imagen Noticia 2">
+        <h2>La nfl y sus raices</h2>
+        <p>El fútbol americano es un deporte profundamente arraigado en la cultura estadounidense, con una larga historia que se remonta a fines del siglo XIX.</p>
+        <p><a href="#">Leer más</a></p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="noticia">
+        <img src="Influencia-de-la-tecnologia-en-la-investigacion-cientifica-2-1536x1024.jpg" alt="Imagen Noticia 1">
+        <h2>Avances en la ciencia mediante la tegnologia</h2>
+        <p>La ciencia y la tecnología han sido motores fundamentales del progreso humano a lo largo de la historia. Desde los albores de la civilización, la curiosidad humana y el deseo de comprender el mundo que nos rodea han impulsado importantes descubrimientos científicos y avances tecnológicos.</p>
+        <p><a href="#">Leer más</a></p>
+    </div>
+
+    <div class="noticia">
+      <img src="Beisbol-de-Grandes-Ligas.jpg" alt="Imagen Noticia 2">
+        <h2>Baseball de Grandes Ligas</h2>
+        <p>"Las Grandes Ligas de Béisbol (MLB) representan el pináculo del deporte del béisbol a nivel mundial, con una rica historia que se remonta al siglo XIX. </p>
+        <p><a href="#">Leer más</a></p>
+    </div>
+    <div class="noticia">
+      <img src="WELL-EG5-EXPLAINER1-gkwq-videoSixteenByNine3000.jpg" alt="Imagen Noticia 2">
+        <h2>Virus nacido en china se propaga nuevamente</h2>
+        <p>La COVID-19, causada por el coronavirus SARS-CoV-2, ha sido una pandemia global sin precedentes que ha sacudido al mundo desde su brote inicial en diciembre de 2019 en la ciudad china de Wuhan. </p>
+        <p><a href="#">Leer más</a></p>
+    </div>
+</div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+   <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleBtn = document.getElementById("toggle-btn");
+            const menuList = document.getElementById("menu-list");
+    
+            toggleBtn.addEventListener("click", function() {
+                menuList.classList.toggle("show");
+            });
+        });
+        const express = require('express');
+const path = require('path');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Middleware para servir archivos estáticos desde la carpeta 'public'
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Ruta de ejemplo para manejar solicitudes GET
+app.get('/api/ejemplo', (req, res) => {
+  // Aquí puedes manejar la lógica de tu backend
+  res.json({ mensaje: 'Este es un ejemplo de respuesta desde el backend.' });
+});
+
+// Iniciar el servidor
+app.listen(PORT, () => {
+  console.log(`Servidor en ejecución en http://localhost:${PORT}`);
+});
+
+
+    </script>
+
+</body>
+</html>
